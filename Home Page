@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jazz House Big Band | Eastern Idaho</title>
+
+  <meta
+    name="description"
+    content="Jazz House Big Band brings timeless swing-era music to weddings, dances, concerts, community events, and special occasions throughout Eastern Idaho."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    :root {
+      --black: #090909;
+      --dark: #111111;
+      --dark-light: #191919;
+      --gold: #c6a15b;
+      --gold-light: #e0c58a;
+      --cream: #f3ead8;
+      --white: #ffffff;
+      --muted: #c8c1b6;
+      --border: rgba(198, 161, 91, 0.45);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.3rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .gold-line {
+      width: 90px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem 0 2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0.85rem 1.7rem;
+      border: 1px solid var(--gold);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.13rem;
+      text-transform: uppercase;
+      transition: 0.25s ease;
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: var(--black);
+    }
+
+    .button-primary:hover {
+      background: var(--gold-light);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .button-secondary {
+      background: transparent;
+      color: var(--cream);
+    }
+
+    .button-secondary:hover {
+      background: rgba(198, 161, 91, 0.12);
+      color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(9, 9, 9, 0.92);
+      border-bottom: 1px solid rgba(198, 161, 91, 0.22);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-main {
+      font-family: "Cinzel", serif;
+      color: var(--white);
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.16rem;
+    }
+
+    .brand-sub {
+      margin-top: 0.45rem;
+      color: var(--gold);
+      font-size: 0.66rem;
+      letter-spacing: 0.38rem;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      color: var(--cream);
+      font-size: 0.76rem;
+      font-weight: 500;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .menu-button {
+      display: none;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--cream);
+      padding: 0.55rem 0.75rem;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: 130px 0 70px;
+      background:
+        linear-gradient(rgba(5, 5, 5, 0.55), rgba(5, 5, 5, 0.92)),
+        radial-gradient(circle at center, rgba(198, 161, 91, 0.16), transparent 55%),
+        #0c0c0c;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(198, 161, 91, 0.32);
+      pointer-events: none;
+    }
+
+    .hero::before {
+      inset: 110px 4% 28px;
+    }
+
+    .hero::after {
+      inset: 122px 5% 40px;
+    }
+
+    .hero-layout {
+      position: relative;
+      z-index: 2;
+      width: min(1180px, 90%);
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .hero-copy {
+      padding: 2rem 0;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-family: "Cinzel", serif;
+      font-size: clamp(3rem, 7vw, 6.7rem);
+      line-height: 0.98;
+      color: var(--white);
+      letter-spacing: 0.05rem;
+      text-transform: uppercase;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: var(--gold);
+      font-size: 0.55em;
+      letter-spacing: 0.35rem;
+      margin-top: 1rem;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-top: 2rem;
+      color: var(--cream);
+      font-size: 1.12rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2.2rem;
+    }
+
+    .photo-placeholder {
+      min-height: 520px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.03), transparent),
+        var(--dark-light);
+      color: var(--gold-light);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .photo-placeholder::before,
+    .photo-placeholder::after {
+      content: "";
+      position: absolute;
+      background: rgba(198, 161, 91, 0.3);
+    }
+
+    .photo-placeholder::before {
+      width: 1px;
+      height: 140%;
+      transform: rotate(36deg);
+    }
+
+    .photo-placeholder::after {
+      width: 140%;
+      height: 1px;
+      transform: rotate(-24deg);
+    }
+
+    .placeholder-text {
+      position: relative;
+      z-index: 2;
+      padding: 1.4rem;
+      background: rgba(9, 9, 9, 0.86);
+      border: 1px solid var(--border);
+      font-family: "Cinzel", serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.14rem;
+      text-transform: uppercase;
+    }
+
+    .intro-strip {
+      background: var(--gold);
+      color: var(--black);
+      border-top: 1px solid var(--gold-light);
+      border-bottom: 1px solid var(--gold-light);
+    }
+
+    .intro-strip-grid {
+      min-height: 115px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+
+    .intro-stat {
+      padding: 1.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(9, 9, 9, 0.25);
+    }
+
+    .intro-stat:last-child {
+      border-right: none;
+    }
+
+    .intro-stat strong {
+      display: block;
+      font-family: "Cinzel", serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .intro-stat span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .about {
+      background: var(--dark);
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about .photo-placeholder {
+      min-height: 500px;
+    }
+
+    .about-copy p {
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+    }
+
+    .about-copy .button {
+      margin-top: 1rem;
+    }
+
+    .services {
+      background:
+        linear-gradient(rgba(9, 9, 9, 0.96), rgba(9, 9, 9, 0.96)),
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 14px,
+          rgba(198, 161, 91, 0.04) 14px,
+          rgba(198, 161, 91, 0.04) 15px
+        );
+    }
+
+    .services-header {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .services-header .section-intro {
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .card {
+      position: relative;
+      min-height: 310px;
+      padding: 2.2rem;
+      border: 1px solid var(--border);
+      background: rgba(24, 24, 24, 0.88);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: var(--gold);
+    }
+
+    .card-number {
+      color: var(--gold);
+      font-family: "Cinzel", serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.15rem;
+    }
+
+    .card h3 {
+      margin: 3rem 0 1rem;
+      font-family: "Cinzel", serif;
+      color: var(--white);
+      font-size: 1.45rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 1.6rem;
+      color: var(--gold-light);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.11rem;
+      text-transform: uppercase;
+    }
+
+    .featured {
+      background: var(--dark);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .featured .photo-placeholder {
+      min-height: 450px;
+    }
+
+    .feature-list {
+      list-style: none;
+      margin: 2rem 0;
+    }
+
+    .feature-list li {
+      padding: 0.85rem 0;
+      color: var(--cream);
+      border-bottom: 1px solid rgba(198, 161, 91, 0.2);
+    }
+
+    .feature-list li::before {
+      content: "◆";
+      color: var(--gold);
+      margin-right: 0.8rem;
+      font-size: 0.65rem;
+    }
+
+    .booking-banner {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 120px 0;
+      background:
+        radial-gradient(circle at center, rgba(198, 161, 91, 0.2), transparent 55%),
+        var(--black);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .booking-banner::before,
+    .booking-banner::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border: 1px solid rgba(198, 161, 91, 0.28);
+      transform: rotate(45deg);
+    }
+
+    .booking-banner::before {
+      left: -110px;
+      top: 50%;
+      translate: 0 -50%;
+    }
+
+    .booking-banner::after {
+      right: -110px;
+      top: 50%;
+      translate: 0 -50%;
+    }
+
+    .booking-banner .section-intro {
+      margin: 0 auto;
+    }
+
+    .booking-banner .button {
+      margin-top: 2rem;
+    }
+
+    .scholarship {
+      background: var(--cream);
+      color: var(--black);
+    }
+
+    .scholarship .section-title {
+      color: var(--black);
+    }
+
+    .scholarship .section-intro {
+      color: #4c4439;
+    }
+
+    .scholarship-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 3rem;
+      align-items: center;
+      padding: 3rem;
+      border: 1px solid rgba(9, 9, 9, 0.28);
+      background: rgba(255, 255, 255, 0.38);
+    }
+
+    .footer {
+      padding: 70px 0 30px;
+      background: #050505;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr 0.7fr;
+      gap: 3rem;
+    }
+
+    .footer-brand p {
+      max-width: 440px;
+      margin-top: 1.4rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .footer h3 {
+      color: var(--gold-light);
+      font-family: "Cinzel", serif;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      margin-top: 3.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(198, 161, 91, 0.18);
+      color: #928c82;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    @media (max-width: 950px) {
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 84px;
+        left: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        background: #090909;
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 5%;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 1rem 0;
+      }
+
+      .hero-layout,
+      .two-column,
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-actions {
+        justify-content: center;
+      }
+
+      .hero .photo-placeholder {
+        min-height: 390px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-strip-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(9, 9, 9, 0.25);
+      }
+
+      .intro-stat:last-child {
+        border-bottom: none;
+      }
+
+      .scholarship-card {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 80px 0;
+      }
+
+      .nav {
+        min-height: 72px;
+      }
+
+      .brand-main {
+        font-size: 0.95rem;
+      }
+
+      .brand-sub {
+        font-size: 0.55rem;
+      }
+
+      .nav-links {
+        top: 72px;
+      }
+
+      .hero {
+        padding-top: 110px;
+      }
+
+      .hero::before {
+        inset: 92px 2.5% 18px;
+      }
+
+      .hero::after {
+        inset: 101px 4% 27px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .hero h1 span {
+        letter-spacing: 0.15rem;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .photo-placeholder {
+        min-height: 320px;
+      }
+
+      .scholarship-card {
+        padding: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav">
+
+      <a href="index.html" class="brand" aria-label="Jazz House Big Band homepage">
+        <span class="brand-main">Jazz House</span>
+        <span class="brand-sub">Big Band</span>
+      </a>
+
+      <button
+        class="menu-button"
+        id="menuButton"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="performances.html">Performances</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="book.html">Book the Band</a></li>
+        <li><a href="scholarship.html">Scholarship</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-layout">
+
+        <div class="hero-copy">
+
+          <p class="eyebrow">The Sound of the Swing Era</p>
+
+          <h1>
+            Jazz House
+            <span>Big Band</span>
+          </h1>
+
+          <p class="hero-description">
+            Timeless big band music performed live for concerts, dances,
+            weddings, festivals, corporate events, and special occasions
+            throughout Eastern Idaho.
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="book.html" class="button button-primary">
+              Book the Band
+            </a>
+
+            <a href="about.html" class="button button-secondary">
+              Discover Our Story
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="photo-placeholder">
+          <div class="placeholder-text">
+            Hero Band Photo
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="intro-strip">
+
+      <div class="container intro-strip-grid">
+
+        <div class="intro-stat">
+          <strong>18-Piece Ensemble</strong>
+          <span>Classic Big Band Sound</span>
+        </div>
+
+        <div class="intro-stat">
+          <strong>Eastern Idaho</strong>
+          <span>Concerts and Events</span>
+        </div>
+
+        <div class="intro-stat">
+          <strong>Live Entertainment</strong>
+          <span>Swing, Jazz and Dance Music</span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section about">
+
+      <div class="container two-column">
+
+        <div class="photo-placeholder">
+          <div class="placeholder-text">
+            About Section Photo
+          </div>
+        </div>
+
+        <div class="about-copy">
+
+          <p class="eyebrow">About the Band</p>
+
+          <h2 class="section-title">
+            A Living Legacy of Swing
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p>
+            Jazz House Big Band brings the energy, elegance, and excitement
+            of classic big band music to audiences throughout Eastern Idaho.
+          </p>
+
+          <p>
+            With a full ensemble of saxophones, trombones, trumpets, rhythm
+            section, and vocalists, the band performs music inspired by the
+            great sounds of Count Basie, Duke Ellington, Glenn Miller, Benny
+            Goodman, and other legendary artists.
+          </p>
+
+          <p>
+            From formal concerts to lively community dances, every performance
+            is designed to preserve the spirit of the Swing Era while creating
+            an unforgettable experience for modern audiences.
+          </p>
+
+          <a href="about.html" class="button button-secondary">
+            Read More About Us
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section services">
+
+      <div class="container">
+
+        <div class="services-header">
+
+          <p class="eyebrow">Live Music for Every Occasion</p>
+
+          <h2 class="section-title">
+            Bring the Big Band Experience to Your Event
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p class="section-intro">
+            Jazz House Big Band offers professional live entertainment for
+            private celebrations, public events, and community gatherings.
+          </p>
+
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+
+            <span class="card-number">01</span>
+
+            <h3>Weddings and Galas</h3>
+
+            <p>
+              Create an elegant and memorable atmosphere with classic jazz,
+              swing favorites, and sophisticated live entertainment.
+            </p>
+
+            <a href="performances.html" class="card-link">
+              Explore Performances →
+            </a>
+
+          </article>
+
+          <article class="card">
+
+            <span class="card-number">02</span>
+
+            <h3>Concerts and Dances</h3>
+
+            <p>
+              Fill the dance floor with energetic swing music or present a
+              full concert featuring favorites from the golden age of jazz.
+            </p>
+
+            <a href="performances.html" class="card-link">
+              Explore Performances →
+            </a>
+
+          </article>
+
+          <article class="card">
+
+            <span class="card-number">03</span>
+
+            <h3>Community and Corporate Events</h3>
+
+            <p>
+              Professional entertainment for festivals, fundraisers, holiday
+              parties, conferences, and community celebrations.
+            </p>
+
+            <a href="performances.html" class="card-link">
+              Explore Performances →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section featured">
+
+      <div class="container featured-grid">
+
+        <div>
+
+          <p class="eyebrow">The Full Big Band Sound</p>
+
+          <h2 class="section-title">
+            Classic Music. Modern Experience.
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p class="section-intro">
+            Jazz House Big Band combines the timeless sound and style of the
+            1920s through the Swing Era with the professionalism expected from
+            modern live entertainment.
+          </p>
+
+          <ul class="feature-list">
+            <li>Full eighteen-piece jazz orchestra</li>
+            <li>Instrumental and vocal selections</li>
+            <li>Music for dancing or concert listening</li>
+            <li>Flexible programs for many event types</li>
+            <li>Professional presentation and communication</li>
+          </ul>
+
+          <a href="book.html" class="button button-primary">
+            Request Booking Information
+          </a>
+
+        </div>
+
+        <div class="photo-placeholder">
+          <div class="placeholder-text">
+            Performance Photo
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="booking-banner">
+
+      <div class="container">
+
+        <p class="eyebrow">Make Your Event Unforgettable</p>
+
+        <h2 class="section-title">
+          Book Jazz House Big Band
+        </h2>
+
+        <p class="section-intro">
+          Tell us about your event, preferred date, location, and musical needs.
+          We will help you create a live music experience your guests will remember.
+        </p>
+
+        <a href="book.html" class="button button-primary">
+          Start a Booking Request
+        </a>
+
+      </div>
+
+    </section>
+
+    <section class="section scholarship">
+
+      <div class="container scholarship-card">
+
+        <div>
+
+          <p class="eyebrow">Supporting Future Musicians</p>
+
+          <h2 class="section-title">
+            The Doug Wareing Scholarship
+          </h2>
+
+          <div class="gold-line"></div>
+
+          <p class="section-intro">
+            Learn more about the scholarship created to honor Doug Wareing's
+            musical legacy and support the next generation of musicians.
+          </p>
+
+        </div>
+
+        <a
+          href="https://www.dougwareingscholarship.org/"
+          class="button button-primary"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Scholarship Website
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <a href="index.html" class="brand">
+            <span class="brand-main">Jazz House</span>
+            <span class="brand-sub">Big Band</span>
+          </a>
+
+          <p>
+            Preserving the sound, style, and excitement of classic big band
+            music through live performances across Eastern Idaho.
+          </p>
+
+        </div>
+
+        <div>
+
+          <h3>Explore</h3>
+
+          <ul class="footer-links">
+            <li><a href="about.html">About the Band</a></li>
+            <li><a href="performances.html">Performances</a></li>
+            <li><a href="gallery.html">Photo Gallery</a></li>
+            <li><a href="book.html">Book the Band</a></li>
+          </ul>
+
+        </div>
+
+        <div>
+
+          <h3>Connect</h3>
+
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li>
+              <a
+                href="https://www.dougwareingscholarship.org/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Doug Wareing Scholarship
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        © 2026 Jazz House Big Band. All rights reserved.
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuButton.setAttribute("aria-expanded", isOpen);
+      menuButton.textContent = isOpen ? "✕" : "☰";
+    });
+  </script>
+
+</body>
+</html>
