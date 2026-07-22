@@ -1,4 +1,4 @@
-OCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -441,8 +441,8 @@ OCTYPE html>
 
     .card {
       position: relative;
-      min-height: 310px;
-      padding: 2.2rem;
+      min-height: 285px;
+      padding: 2.5rem 2.2rem 2.2rem;
       border: 1px solid var(--border);
       background: rgba(24, 24, 24, 0.88);
       transition: 0.25s ease;
@@ -452,16 +452,8 @@ OCTYPE html>
       transform: translateY(-7px);
       border-color: var(--gold);
     }
-
-    .card-number {
-      color: var(--gold);
-      font-family: "Cinzel", serif;
-      font-size: 0.85rem;
-      letter-spacing: 0.15rem;
-    }
-
     .card h3 {
-      margin: 3rem 0 1rem;
+      margin: 0.25rem 0 1rem;
       font-family: "Cinzel", serif;
       color: var(--white);
       font-size: 1.45rem;
@@ -470,11 +462,12 @@ OCTYPE html>
     .card p {
       color: var(--muted);
       font-size: 0.95rem;
+      margin-top: 0.25rem;
     }
 
     .card-link {
       display: inline-block;
-      margin-top: 1.6rem;
+      margin-top: 1.35rem;
       color: var(--gold-light);
       font-size: 0.76rem;
       font-weight: 600;
@@ -774,6 +767,201 @@ OCTYPE html>
         grid-template-columns: 1fr;
       }
     }
+
+    /* ===== Refined Art Deco enhancements ===== */
+
+    body {
+      background:
+        radial-gradient(circle at 18% 12%, rgba(198, 161, 91, 0.045), transparent 22%),
+        radial-gradient(circle at 82% 38%, rgba(198, 161, 91, 0.035), transparent 20%),
+        var(--black);
+    }
+
+    .site-header {
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.28);
+    }
+
+    .nav-links a {
+      padding: 0.45rem 0;
+    }
+
+    .nav-links a:hover {
+      text-shadow: 0 0 18px rgba(224, 197, 138, 0.28);
+    }
+
+    .hero {
+      isolation: isolate;
+    }
+
+    .hero-layout::before,
+    .hero-layout::after {
+      content: "";
+      position: absolute;
+      width: 74px;
+      height: 74px;
+      border-color: var(--gold);
+      opacity: 0.65;
+      pointer-events: none;
+    }
+
+    .hero-layout::before {
+      left: -18px;
+      top: -18px;
+      border-left: 2px solid;
+      border-top: 2px solid;
+    }
+
+    .hero-layout::after {
+      right: -18px;
+      bottom: -18px;
+      border-right: 2px solid;
+      border-bottom: 2px solid;
+    }
+
+    .hero h1 {
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.42);
+    }
+
+    .section-title {
+      text-wrap: balance;
+    }
+
+    .gold-line {
+      position: relative;
+      width: 112px;
+    }
+
+    .gold-line::before,
+    .gold-line::after {
+      content: "◆";
+      position: absolute;
+      top: 50%;
+      color: var(--gold);
+      font-size: 0.55rem;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .gold-line::before {
+      left: -18px;
+    }
+
+    .gold-line::after {
+      right: -18px;
+    }
+
+    .photo-placeholder {
+      border: 1px solid rgba(224, 197, 138, 0.55);
+      box-shadow:
+        inset 0 0 0 10px rgba(9, 9, 9, 0.68),
+        inset 0 0 0 11px rgba(198, 161, 91, 0.22),
+        0 24px 60px rgba(0, 0, 0, 0.38);
+      transition: transform 0.35s ease, border-color 0.35s ease;
+    }
+
+    .photo-placeholder:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold-light);
+    }
+
+    .photo-placeholder .placeholder-text {
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.38);
+    }
+
+    .card {
+      overflow: hidden;
+      box-shadow: inset 0 0 0 7px rgba(9, 9, 9, 0.28);
+    }
+
+    .card::before,
+    .card::after {
+      content: "";
+      position: absolute;
+      width: 42px;
+      height: 42px;
+      border-color: rgba(224, 197, 138, 0.65);
+      transition: 0.25s ease;
+    }
+
+    .card::before {
+      top: 13px;
+      left: 13px;
+      border-top: 1px solid;
+      border-left: 1px solid;
+    }
+
+    .card::after {
+      right: 13px;
+      bottom: 13px;
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+    }
+
+    .card:hover::before,
+    .card:hover::after {
+      width: 58px;
+      height: 58px;
+      border-color: var(--gold-light);
+    }
+
+    .scholarship {
+      scroll-margin-top: 84px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scholarship-card {
+      position: relative;
+      box-shadow:
+        inset 0 0 0 8px rgba(255, 255, 255, 0.2),
+        0 22px 55px rgba(9, 9, 9, 0.12);
+    }
+
+    .scholarship-card::before,
+    .scholarship-card::after {
+      content: "";
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-color: rgba(9, 9, 9, 0.38);
+      pointer-events: none;
+    }
+
+    .scholarship-card::before {
+      top: 15px;
+      left: 15px;
+      border-top: 1px solid;
+      border-left: 1px solid;
+    }
+
+    .scholarship-card::after {
+      right: 15px;
+      bottom: 15px;
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-copy,
+      .hero .photo-placeholder {
+        animation: decoReveal 0.9s ease both;
+      }
+
+      .hero .photo-placeholder {
+        animation-delay: 0.15s;
+      }
+
+      @keyframes decoReveal {
+        from {
+          opacity: 0;
+          transform: translateY(24px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+
   </style>
 </head>
 
@@ -847,7 +1035,7 @@ OCTYPE html>
 
         <div class="photo-placeholder">
           <div class="placeholder-text">
-            Hero Band Photo
+            Featured Band Photo
           </div>
         </div>
 
@@ -884,7 +1072,7 @@ OCTYPE html>
 
         <div class="photo-placeholder">
           <div class="placeholder-text">
-            About Section Photo
+            Band History Photo
           </div>
         </div>
 
@@ -950,9 +1138,6 @@ OCTYPE html>
         <div class="cards">
 
           <article class="card">
-
-            <span class="card-number">01</span>
-
             <h3>Weddings and Galas</h3>
 
             <p>
@@ -967,9 +1152,6 @@ OCTYPE html>
           </article>
 
           <article class="card">
-
-            <span class="card-number">02</span>
-
             <h3>Concerts and Dances</h3>
 
             <p>
@@ -984,9 +1166,6 @@ OCTYPE html>
           </article>
 
           <article class="card">
-
-            <span class="card-number">03</span>
-
             <h3>Community and Corporate Events</h3>
 
             <p>
@@ -1042,7 +1221,7 @@ OCTYPE html>
 
         <div class="photo-placeholder">
           <div class="placeholder-text">
-            Performance Photo
+            Live Performance Photo
           </div>
         </div>
 
