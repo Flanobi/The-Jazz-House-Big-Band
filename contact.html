@@ -1,0 +1,391 @@
+from pathlib import Path
+import re
+
+index_path = Path("/mnt/data/index.html")
+html = index_path.read_text(encoding="utf-8")
+
+contact_css = """
+    /* ===== Contact page ===== */
+
+    .contact-hero {
+      min-height: 62vh;
+      display: grid;
+      place-items: center;
+      padding: 150px 0 90px;
+      text-align: center;
+      background:
+        linear-gradient(rgba(5, 5, 5, 0.62), rgba(5, 5, 5, 0.92)),
+        radial-gradient(circle at center, rgba(198, 161, 91, 0.18), transparent 55%),
+        #0c0c0c;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .contact-hero .section-intro {
+      margin: 0 auto;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .manager-card,
+    .contact-panel {
+      border: 1px solid var(--border);
+      background: rgba(24, 24, 24, 0.9);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+    }
+
+    .manager-card {
+      padding: 1rem;
+    }
+
+    .manager-photo {
+      min-height: 520px;
+    }
+
+    .manager-caption {
+      padding: 1.35rem 1rem 0.55rem;
+      text-align: center;
+      font-family: "Cinzel", serif;
+      color: var(--white);
+      font-size: 1.25rem;
+      letter-spacing: 0.08rem;
+    }
+
+    .contact-panel {
+      padding: 2.5rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      padding: 1.35rem 0;
+      border-bottom: 1px solid rgba(198, 161, 91, 0.2);
+    }
+
+    .contact-item:last-child {
+      border-bottom: none;
+    }
+
+    .contact-label {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: var(--gold-light);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.18rem;
+      text-transform: uppercase;
+    }
+
+    .contact-value {
+      color: var(--cream);
+      font-size: 1.05rem;
+    }
+
+    .contact-value:hover {
+      color: var(--gold-light);
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .inquiry-section {
+      background:
+        linear-gradient(rgba(9, 9, 9, 0.96), rgba(9, 9, 9, 0.96)),
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 14px,
+          rgba(198, 161, 91, 0.04) 14px,
+          rgba(198, 161, 91, 0.04) 15px
+        );
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+      margin-top: 2.5rem;
+    }
+
+    .form-field {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .form-field.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-field label {
+      color: var(--gold-light);
+      font-size: 0.73rem;
+      font-weight: 600;
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      color: var(--cream);
+      background: #111111;
+      border: 1px solid rgba(198, 161, 91, 0.45);
+      padding: 0.95rem 1rem;
+      outline: none;
+    }
+
+    .form-field textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold-light);
+      box-shadow: 0 0 0 3px rgba(198, 161, 91, 0.1);
+    }
+
+    .form-note {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 950px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .manager-photo {
+        min-height: 420px;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .contact-hero {
+        min-height: 52vh;
+        padding-top: 125px;
+      }
+
+      .contact-panel {
+        padding: 1.6rem;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .form-field.full {
+        grid-column: auto;
+      }
+    }
+"""
+
+html = html.replace("  </style>", contact_css + "\n  </style>")
+
+main_content = """
+  <main id="contact">
+
+    <section class="contact-hero">
+      <div class="container">
+        <p class="eyebrow">Contact Jazz House</p>
+        <h1 class="section-title">Let’s Make Your Event Unforgettable</h1>
+        <div class="gold-line" style="margin-left:auto; margin-right:auto;"></div>
+        <p class="section-intro">
+          Whether you are planning a concert, wedding, dance, festival,
+          corporate event, or private celebration, we would love to hear from you.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-layout">
+
+        <figure class="manager-card">
+          <div class="photo-placeholder manager-photo">
+            <div class="placeholder-text">Band Manager Photo</div>
+          </div>
+          <figcaption class="manager-caption">Karol Taylor</figcaption>
+        </figure>
+
+        <div class="contact-panel">
+          <p class="eyebrow">Get in Touch</p>
+          <h2 class="section-title">Contact the Band</h2>
+          <div class="gold-line"></div>
+
+          <p class="section-intro">
+            Reach out to ask about availability, performance options,
+            event details, or general information.
+          </p>
+
+          <div class="contact-list">
+
+            <div class="contact-item">
+              <span class="contact-label">Phone</span>
+              <a class="contact-value" href="tel:+12085897457">
+                (208) 589-7457
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a class="contact-value" href="mailto:booking@jazzhousebigband.org">
+                booking@jazzhousebigband.org
+              </a>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-label">Based In</span>
+              <span class="contact-value">Eastern Idaho</span>
+            </div>
+
+          </div>
+
+          <div class="social-row">
+            <a
+              href="https://www.facebook.com/JazzHouseBigBand/"
+              class="button button-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+
+            <a
+              href="#"
+              class="button button-secondary"
+              aria-label="Jazz House Big Band Instagram coming soon"
+            >
+              Instagram Coming Soon
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section inquiry-section">
+      <div class="container">
+
+        <p class="eyebrow">Booking Inquiry</p>
+        <h2 class="section-title">Tell Us About Your Event</h2>
+        <div class="gold-line"></div>
+
+        <p class="section-intro">
+          Complete the form below to begin planning your event.
+        </p>
+
+        <form
+          class="form-grid"
+          action="mailto:booking@jazzhousebigband.org"
+          method="post"
+          enctype="text/plain"
+        >
+
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input id="name" name="Name" type="text" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" required>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="Phone" type="tel">
+          </div>
+
+          <div class="form-field">
+            <label for="eventType">Event Type</label>
+            <select id="eventType" name="Event Type">
+              <option value="">Select an event type</option>
+              <option>Concert</option>
+              <option>Dance</option>
+              <option>Wedding</option>
+              <option>Festival</option>
+              <option>Corporate Event</option>
+              <option>Private Event</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="eventDate">Event Date</label>
+            <input id="eventDate" name="Event Date" type="date">
+          </div>
+
+          <div class="form-field">
+            <label for="location">Venue or City</label>
+            <input id="location" name="Venue or City" type="text">
+          </div>
+
+          <div class="form-field full">
+            <label for="message">Event Details</label>
+            <textarea
+              id="message"
+              name="Event Details"
+              placeholder="Tell us about your event, schedule, audience, and musical needs."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-field full">
+            <button class="button button-primary" type="submit">
+              Send Inquiry
+            </button>
+            <p class="form-note">
+              This temporary form opens your email application. A hosted form service
+              can be connected later when the final band email is ready.
+            </p>
+          </div>
+
+        </form>
+
+      </div>
+    </section>
+
+    <section class="booking-banner">
+      <div class="container">
+        <p class="eyebrow">The Sound of the Swing Era</p>
+        <h2 class="section-title">Bring Jazz House to Your Event</h2>
+        <p class="section-intro">
+          Contact Karol Taylor to ask about dates, locations, and performance options.
+        </p>
+        <a href="tel:+12085897457" class="button button-primary">
+          Call (208) 589-7457
+        </a>
+      </div>
+    </section>
+
+  </main>
+"""
+
+html = re.sub(r"\s*<main>.*?</main>", "\n" + main_content, html, flags=re.DOTALL)
+
+# Make contact navigation link point to this page's contact section.
+html = html.replace('<li><a href="contact.html">Contact</a></li>',
+                    '<li><a href="#contact">Contact</a></li>')
+
+# Ensure footer Facebook link uses the real public page.
+html = html.replace('<li><a href="#">Facebook</a></li>',
+                    '<li><a href="https://www.facebook.com/JazzHouseBigBand/" target="_blank" rel="noopener noreferrer">Facebook</a></li>')
+
+out = Path("/mnt/data/contact.html")
+out.write_text(html, encoding="utf-8")
+print(f"Created {out}")
