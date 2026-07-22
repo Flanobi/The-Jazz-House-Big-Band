@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upcoming Performances | Jazz House Big Band</title>
+<meta name="description" content="Upcoming Jazz House Big Band concerts, swing dances, festivals, and community performances in Eastern Idaho.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#090909;--dark:#111;--panel:#191919;--gold:#c6a15b;--gold2:#e0c58a;--cream:#f3ead8;--white:#fff;--muted:#c8c1b6;--border:rgba(198,161,91,.45)}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--black);color:var(--cream);font-family:Montserrat,sans-serif;line-height:1.7}a{color:inherit;text-decoration:none}.container{width:min(1180px,90%);margin:auto}.section{padding:100px 0}.eyebrow{color:var(--gold2);font-size:.78rem;font-weight:600;letter-spacing:.3rem;text-transform:uppercase;margin-bottom:1rem}.title{font-family:Cinzel,serif;color:var(--white);font-size:clamp(2rem,5vw,3.8rem);line-height:1.12}.intro{max-width:740px;color:var(--muted);font-size:1.04rem}.line{width:112px;height:2px;background:var(--gold);margin:1.5rem 0 2rem}.button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.85rem 1.6rem;border:1px solid var(--gold);font-size:.78rem;font-weight:600;letter-spacing:.12rem;text-transform:uppercase;transition:.25s}.primary{background:var(--gold);color:var(--black)}.secondary{background:transparent;color:var(--cream)}.button:hover{transform:translateY(-2px);border-color:var(--gold2)}.primary:hover{background:var(--gold2)}
+header{position:fixed;inset:0 0 auto;z-index:50;background:rgba(9,9,9,.93);border-bottom:1px solid rgba(198,161,91,.22);backdrop-filter:blur(14px)}.nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:2rem}.brand{display:flex;flex-direction:column;line-height:1}.brand-main{font-family:Cinzel,serif;color:white;font-size:1.2rem;font-weight:700;letter-spacing:.16rem}.brand-sub{margin-top:.45rem;color:var(--gold);font-size:.66rem;letter-spacing:.38rem;text-transform:uppercase}.nav-links{display:flex;gap:1.5rem;list-style:none}.nav-links a{font-size:.74rem;letter-spacing:.09rem;text-transform:uppercase}.nav-links a:hover,.nav-links a.active{color:var(--gold2)}.menu{display:none;background:transparent;color:var(--cream);border:1px solid var(--gold);padding:.5rem .7rem}
+.hero{min-height:72vh;display:grid;place-items:center;text-align:center;padding:145px 0 85px;background:linear-gradient(rgba(5,5,5,.55),rgba(5,5,5,.94)),radial-gradient(circle,rgba(198,161,91,.2),transparent 55%),#0c0c0c;border-bottom:1px solid var(--border)}.hero .intro{margin:auto}.tags{display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem 1.2rem;margin-top:2rem;color:var(--gold2);font-size:.76rem;letter-spacing:.1rem;text-transform:uppercase}
+.featured{background:var(--dark)}.two-col{display:grid;grid-template-columns:.9fr 1.1fr;gap:4rem;align-items:center}.poster{min-height:500px;display:grid;place-items:center;text-align:center;padding:2rem;border:1px solid var(--gold2);background:radial-gradient(circle,rgba(198,161,91,.16),transparent 55%),var(--panel);box-shadow:inset 0 0 0 10px #090909,inset 0 0 0 11px rgba(198,161,91,.3)}.poster small{color:var(--gold2);letter-spacing:.25rem;text-transform:uppercase}.poster h2{font-family:Cinzel,serif;color:white;font-size:clamp(2.2rem,5vw,4.5rem);line-height:1;margin:1.2rem 0}.poster em{font-family:"Playfair Display",serif;color:var(--gold2);font-size:1.3rem}.details{list-style:none;margin:2rem 0}.details li{padding:.85rem 0;border-bottom:1px solid rgba(198,161,91,.2)}.details strong{display:inline-block;min-width:110px;color:var(--gold2);font-size:.73rem;letter-spacing:.1rem;text-transform:uppercase}
+.month{background:linear-gradient(rgba(9,9,9,.96),rgba(9,9,9,.96)),repeating-linear-gradient(45deg,transparent,transparent 14px,rgba(198,161,91,.04) 14px,rgba(198,161,91,.04) 15px)}.month-box{margin-top:3rem;border:1px solid var(--border);background:var(--panel)}.month-head{display:flex;justify-content:space-between;align-items:center;padding:1.4rem 2rem;background:var(--gold);color:var(--black)}.month-head h3{font-family:Cinzel,serif;font-size:1.5rem}.month-event{display:grid;grid-template-columns:130px 1fr auto;gap:2rem;align-items:center;padding:2rem;border-bottom:1px solid rgba(198,161,91,.2)}.month-event:last-child{border-bottom:0}.date{border-right:1px solid rgba(198,161,91,.25);text-align:center}.date b{display:block;font-family:Cinzel,serif;color:var(--gold2);font-size:2.3rem;line-height:1}.date span{font-size:.7rem;letter-spacing:.1rem;text-transform:uppercase;color:var(--muted)}.month-event h4{font-family:Cinzel,serif;color:white;font-size:1.3rem}.month-event p{color:var(--muted);font-size:.91rem}.badge{border:1px solid var(--gold);padding:.5rem .75rem;color:var(--gold2);font-size:.66rem;letter-spacing:.1rem;text-transform:uppercase}
+.dance{background:var(--cream);color:var(--black)}.dance .title{color:var(--black)}.dance .intro{color:#4c4439}.dance-card{display:grid;grid-template-columns:1.05fr .95fr;margin-top:3rem;border:1px solid rgba(9,9,9,.3)}.dance-copy{padding:3.2rem;background:rgba(255,255,255,.35)}.dance-copy h3{font-family:Cinzel,serif;font-size:clamp(2rem,4vw,3.1rem);line-height:1.1;margin-bottom:1rem}.dance-copy p{color:#4c4439;margin-bottom:1.1rem}.facts{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:2.5rem;background:var(--black)}.fact{padding:1.1rem;border:1px solid var(--border)}.fact span{display:block;color:var(--gold2);font-size:.66rem;letter-spacing:.12rem;text-transform:uppercase}.fact strong{font-family:Cinzel,serif;color:white}
+.upcoming{background:var(--dark)}.event-list{display:grid;gap:1.15rem;margin-top:3rem}.event-card{display:grid;grid-template-columns:145px 1fr auto;align-items:center;gap:2rem;padding:1.7rem 2rem;border:1px solid var(--border);background:var(--panel)}.event-card:hover{border-color:var(--gold);transform:translateY(-3px)}.event-date{border-right:1px solid rgba(198,161,91,.25);text-align:center}.event-date strong{display:block;font-family:Cinzel,serif;color:var(--gold2);font-size:1.8rem}.event-date span{font-size:.68rem;color:var(--muted);letter-spacing:.1rem;text-transform:uppercase}.event-card h3{font-family:Cinzel,serif;color:white}.event-card p{color:var(--muted);font-size:.9rem}
+.calendar{background:var(--black)}.calendar-box{margin-top:3rem;padding:2rem;border:1px solid var(--border);background:var(--dark)}.calendar-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.4rem}.calendar-head h3{font-family:Cinzel,serif;color:white}.legend{font-size:.73rem;color:var(--muted)}.dot{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--gold);margin-right:.4rem}.calendar-grid{display:grid;grid-template-columns:repeat(7,1fr);border-left:1px solid rgba(198,161,91,.22);border-top:1px solid rgba(198,161,91,.22)}.day-name,.day{padding:.7rem;border-right:1px solid rgba(198,161,91,.22);border-bottom:1px solid rgba(198,161,91,.22)}.day-name{text-align:center;color:var(--gold2);font-size:.66rem;letter-spacing:.1rem;text-transform:uppercase;background:rgba(198,161,91,.08)}.day{min-height:70px;color:var(--muted);position:relative}.day.event{background:rgba(198,161,91,.09);color:white}.day.event:after{content:"";position:absolute;right:9px;bottom:9px;width:10px;height:10px;border-radius:50%;background:var(--gold)}
+.past{background:var(--dark)}.past-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}.past-card{min-height:310px;display:flex;align-items:flex-end;padding:1.5rem;border:1px solid var(--border);background:linear-gradient(to top,rgba(5,5,5,.95),rgba(5,5,5,.18)),var(--panel)}.past-card h3{font-family:Cinzel,serif;color:white}.past-card p{color:var(--gold2);font-size:.72rem;letter-spacing:.08rem;text-transform:uppercase}
+.follow{text-align:center;background:radial-gradient(circle,rgba(198,161,91,.18),transparent 55%),var(--black)}.follow .intro{margin:auto}.buttons{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin-top:2rem}.book{padding:95px 0;text-align:center;background:var(--gold);color:var(--black)}.book .title{color:var(--black)}.book p{max-width:700px;margin:1rem auto 2rem}.book .button{background:var(--black);color:var(--cream);border-color:var(--black)}
+footer{padding:65px 0 30px;background:#050505;border-top:1px solid var(--border)}.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:3rem}.footer-grid p,.footer-grid a{color:var(--muted);font-size:.9rem}.footer-grid h3{font-family:Cinzel,serif;color:var(--gold2);font-size:1rem;margin-bottom:1rem}.footer-links{list-style:none}.footer-links li{margin-bottom:.65rem}.copyright{margin-top:3rem;padding-top:1.3rem;border-top:1px solid rgba(198,161,91,.18);text-align:center;color:#928c82;font-size:.78rem}
+@media(max-width:950px){.menu{display:block}.nav-links{display:none;position:absolute;top:84px;left:0;width:100%;padding:1rem 5%;background:#090909;flex-direction:column}.nav-links.open{display:flex}.two-col,.dance-card{grid-template-columns:1fr}.past-grid{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.section{padding:78px 0}.nav{min-height:72px}.nav-links{top:72px}.month-event,.event-card{grid-template-columns:1fr}.date,.event-date{text-align:left;border-right:0;border-bottom:1px solid rgba(198,161,91,.25);padding-bottom:1rem}.date b,.date span,.event-date strong,.event-date span{display:inline-block;margin-right:.45rem}.facts{grid-template-columns:1fr}.dance-copy,.facts{padding:2rem}.calendar-box{overflow-x:auto;padding:1rem}.calendar-grid{min-width:650px}.past-grid,.footer-grid{grid-template-columns:1fr}.button{width:100%}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a href="index.html" class="brand"><span class="brand-main">Jazz House</span><span class="brand-sub">Big Band</span></a>
+<button class="menu" id="menuButton" aria-label="Open menu">☰</button>
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+<li><a href="performances.html" class="active">Performances</a></li>
+<li><a href="gallery.html">Gallery</a></li><li><a href="book.html">Book the Band</a></li>
+<li><a href="index.html#scholarship">Scholarship</a></li><li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</header>
+
+<main>
+<section class="hero"><div class="container">
+<p class="eyebrow">Jazz House Live</p><h1 class="title">Upcoming Performances</h1>
+<div class="line" style="margin-left:auto;margin-right:auto"></div>
+<p class="intro">Experience the timeless excitement of live big band music throughout Eastern Idaho.</p>
+<div class="tags"><span>Concerts</span><span>•</span><span>Swing Dances</span><span>•</span><span>Festivals</span><span>•</span><span>Community Events</span></div>
+</div></section>
+
+<section class="section featured"><div class="container two-col">
+<div class="poster"><div><small>Featured Performance</small><h2>Monthly<br>Swing Dance</h2><em>First Saturday of Every Month</em></div></div>
+<div><p class="eyebrow">Next Featured Event</p><h2 class="title">Swing Into the First Saturday</h2><div class="line"></div>
+<p class="intro">Join Jazz House Big Band for an evening of live swing-era music, dancing, and community. Experienced dancers and first-time guests are all welcome.</p>
+<ul class="details">
+<li><strong>Date</strong><span id="featuredDate">First Saturday</span></li>
+<li><strong>Time</strong>Coming Soon</li><li><strong>Venue</strong>Venue Name Coming Soon</li>
+<li><strong>Address</strong>Address Coming Soon</li><li><strong>Admission</strong>Coming Soon</li>
+</ul><a href="#monthly-dance" class="button primary">Dance Details</a></div>
+</div></section>
+
+<section class="section month"><div class="container">
+<p class="eyebrow">On the Schedule</p><h2 class="title">This Month at Jazz House</h2><div class="line"></div>
+<p class="intro">See where you can hear the band this month. New public performances will be added as they are announced.</p>
+<div class="month-box"><div class="month-head"><h3 id="monthHeading">This Month</h3><span>Public Events</span></div>
+<div class="month-event"><div class="date"><b id="danceDay">—</b><span>Saturday</span></div>
+<div><h4>Monthly Swing Dance</h4><p>Live big band music, swing dancing, and a welcoming evening for dancers of every experience level.</p></div><span class="badge">Recurring Event</span></div>
+<div class="month-event"><div class="date"><b>+</b><span>More</span></div>
+<div><h4>Additional Performances</h4><p>More concerts, festivals, and community appearances will be posted as dates are confirmed.</p></div><span class="badge">Check Back Soon</span></div>
+</div></div></section>
+
+<section class="section dance" id="monthly-dance"><div class="container">
+<p class="eyebrow" style="color:#6b552f">Monthly Tradition</p><h2 class="title">The First Saturday Swing Dance</h2><div class="line"></div>
+<p class="intro">A recurring evening of live music and dancing presented by Jazz House Big Band every first Saturday of the month.</p>
+<div class="dance-card"><div class="dance-copy"><h3>Live Music.<br>Real Dancing.<br>Everyone Welcome.</h3>
+<p>Whether you have been swing dancing for years or have never stepped onto the dance floor before, this event is for you.</p>
+<p>Bring friends, meet new people, and enjoy the energy of a full live big band in a classic social-dance atmosphere.</p>
+<a href="contact.html" class="button primary">Ask a Question</a></div>
+<div class="facts">
+<div class="fact"><span>Schedule</span><strong>First Saturday Monthly</strong></div>
+<div class="fact"><span>Time</span><strong>Coming Soon</strong></div>
+<div class="fact"><span>Venue</span><strong>Coming Soon</strong></div>
+<div class="fact"><span>Address</span><strong>Coming Soon</strong></div>
+<div class="fact"><span>Admission</span><strong>Coming Soon</strong></div>
+<div class="fact"><span>Who Can Attend?</span><strong>Everyone Is Welcome</strong></div>
+</div></div></div></section>
+
+<section class="section upcoming"><div class="container">
+<p class="eyebrow">Save the Date</p><h2 class="title">Upcoming Performances</h2><div class="line"></div>
+<p class="intro">Public events will appear here as dates, venues, and performance details are confirmed.</p>
+<div class="event-list" id="eventList"></div>
+</div></section>
+
+<section class="section calendar"><div class="container">
+<p class="eyebrow">Plan Ahead</p><h2 class="title">Performance Calendar</h2><div class="line"></div>
+<p class="intro">Gold-marked dates indicate a scheduled Jazz House performance.</p>
+<div class="calendar-box"><div class="calendar-head"><h3 id="calendarTitle">Calendar</h3><span class="legend"><span class="dot"></span>Performance Date</span></div><div class="calendar-grid" id="calendarGrid"></div></div>
+</div></section>
+
+<section class="section past"><div class="container">
+<p class="eyebrow">From the Bandstand</p><h2 class="title">Past Performances</h2><div class="line"></div>
+<p class="intro">Highlights from previous concerts, dances, festivals, and community events will be added as the gallery grows.</p>
+<div class="past-grid"><article class="past-card"><div><h3>Community Concert</h3><p>Performance Highlight</p></div></article>
+<article class="past-card"><div><h3>Summer Celebration</h3><p>Performance Highlight</p></div></article>
+<article class="past-card"><div><h3>Holiday Swing</h3><p>Performance Highlight</p></div></article></div>
+</div></section>
+
+<section class="section follow"><div class="container">
+<p class="eyebrow">Stay Connected</p><h2 class="title">Never Miss a Performance</h2><div class="line" style="margin-left:auto;margin-right:auto"></div>
+<p class="intro">Follow Jazz House Big Band for performance announcements, schedule updates, rehearsal photos, and behind-the-scenes news.</p>
+<div class="buttons"><a href="https://www.facebook.com/JazzHouseBigBand/" target="_blank" rel="noopener" class="button primary">Facebook</a><a href="#" class="button secondary">Instagram Coming Soon</a></div>
+</div></section>
+
+<section class="book"><div class="container"><p class="eyebrow" style="color:#2a241d">Bring the Band to You</p><h2 class="title">Planning an Event?</h2>
+<p>Jazz House Big Band is available for concerts, weddings, dances, festivals, corporate events, and private celebrations.</p><a href="book.html" class="button">Book the Band</a></div></section>
+</main>
+
+<footer><div class="container"><div class="footer-grid">
+<div><a href="index.html" class="brand"><span class="brand-main">Jazz House</span><span class="brand-sub">Big Band</span></a><p style="margin-top:1.3rem">Preserving the sound, style, and excitement of classic big band music through live performances across Eastern Idaho.</p></div>
+<div><h3>Explore</h3><ul class="footer-links"><li><a href="about.html">About the Band</a></li><li><a href="performances.html">Performances</a></li><li><a href="gallery.html">Photo Gallery</a></li><li><a href="book.html">Book the Band</a></li></ul></div>
+<div><h3>Connect</h3><ul class="footer-links"><li><a href="contact.html">Contact Us</a></li><li><a href="https://www.facebook.com/JazzHouseBigBand/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://wareingscholarship.org/" target="_blank" rel="noopener">Doug Wareing Scholarship</a></li></ul></div>
+</div><div class="copyright">© 2026 Jazz House Big Band. All rights reserved.</div></div></footer>
+
+<script>
+const menuButton=document.getElementById("menuButton"),navLinks=document.getElementById("navLinks");
+menuButton.addEventListener("click",()=>{navLinks.classList.toggle("open");menuButton.textContent=navLinks.classList.contains("open")?"✕":"☰"});
+
+/* Add special performances here:
+const specialEvents=[{title:"Summer Swing Concert",date:"2026-08-15",time:"7:00 PM",venue:"Venue Name",city:"Idaho Falls, Idaho",admission:"Free"}];
+*/
+const specialEvents=[];
+
+function firstSaturday(year,month){const d=new Date(year,month,1);return new Date(year,month,1+(6-d.getDay()+7)%7)}
+function eventObject(date){return{title:"Monthly Swing Dance",date:date.toISOString().slice(0,10),time:"Time Coming Soon",venue:"Venue Coming Soon",city:"Eastern Idaho",admission:"Admission Coming Soon",recurring:true}}
+const today=new Date(),year=today.getFullYear(),month=today.getMonth();
+let nextDance=firstSaturday(year,month);
+if(nextDance<new Date(year,month,today.getDate()))nextDance=firstSaturday(month===11?year+1:year,month===11?0:month+1);
+document.getElementById("featuredDate").textContent=nextDance.toLocaleDateString("en-US",{weekday:"long",month:"long",day:"numeric",year:"numeric"});
+document.getElementById("monthHeading").textContent=today.toLocaleDateString("en-US",{month:"long",year:"numeric"});
+document.getElementById("danceDay").textContent=firstSaturday(year,month).getDate();
+
+const recurring=[];
+for(let i=0;i<6;i++){const raw=month+i,y=year+Math.floor(raw/12),m=raw%12;recurring.push(eventObject(firstSaturday(y,m)))}
+const events=[...recurring,...specialEvents].filter(e=>new Date(e.date+"T23:59:59")>=today).sort((a,b)=>new Date(a.date)-new Date(b.date));
+const list=document.getElementById("eventList");
+events.slice(0,6).forEach(e=>{const d=new Date(e.date+"T12:00:00"),card=document.createElement("article");card.className="event-card";card.innerHTML=`<div class="event-date"><strong>${d.toLocaleDateString("en-US",{month:"short",day:"numeric"})}</strong><span>${d.getFullYear()}</span></div><div><h3>${e.title}</h3><p>${e.time} · ${e.venue} · ${e.city}</p><p>${e.admission}</p></div><a href="${e.recurring?"#monthly-dance":"contact.html"}" class="button secondary">Details</a>`;list.appendChild(card)});
+
+const grid=document.getElementById("calendarGrid");
+document.getElementById("calendarTitle").textContent=new Date(year,month,1).toLocaleDateString("en-US",{month:"long",year:"numeric"});
+["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].forEach(n=>{const x=document.createElement("div");x.className="day-name";x.textContent=n;grid.appendChild(x)});
+const first=new Date(year,month,1).getDay(),days=new Date(year,month+1,0).getDate(),marked=new Set([firstSaturday(year,month).getDate()]);
+specialEvents.forEach(e=>{const d=new Date(e.date+"T12:00:00");if(d.getFullYear()===year&&d.getMonth()===month)marked.add(d.getDate())});
+for(let i=0;i<first;i++){const x=document.createElement("div");x.className="day";grid.appendChild(x)}
+for(let i=1;i<=days;i++){const x=document.createElement("div");x.className="day"+(marked.has(i)?" event":"");x.textContent=i;grid.appendChild(x)}
+</script>
+</body>
+</html>
