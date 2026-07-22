@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jazz House Big Band | Eastern Idaho's Premier Big Band</title>
+
+    <meta name="description" content="Jazz House Big Band performs authentic Swing Era music for weddings, corporate events, festivals, dances, and concerts throughout Eastern Idaho.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<h1>JAZZ HOUSE</h1>
+<span>BIG BAND</span>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#performances">Performances</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#book">Book</a></li>
+<li><a href="#scholarship">Scholarship</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+<div class="mobile-menu">
+☰
+</div>
+
+</nav>
+
+</header>
+
+<main>
+
+<section id="home" class="hero">
+
+<div class="hero-video">
+
+<video autoplay muted loop playsinline>
+
+<source src="videos/hero.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+<div class="hero-overlay"></div>
+
+<div class="hero-content">
+
+<p class="hero-top">
+ESTABLISHED 1996
+</p>
+
+<h2>
+Jazz House
+<span>Big Band</span>
+</h2>
+
+<p class="hero-text">
+
+Keeping the timeless sound of the Swing Era alive through unforgettable live performances across Eastern Idaho.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#book" class="btn gold">
+
+Book the Band
+
+</a>
+
+<a href="#about" class="btn outline">
+
+Learn More
+
+</a>
+
+</div>
+
+</div>
+
+<div class="scroll-indicator">
+
+↓
+
+</div>
+
+</section>
+
+<section id="about" class="about">
+
+<div class="container">
+
+<div class="section-header">
+
+<h3>
+
+About the Band
+
+</h3>
+
+<div class="gold-line"></div>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-image">
+
+<img src="images/band1.jpg" alt="Jazz House Big Band">
+
+</div>
+
+<div class="about-text">
+
+<h4>
+
+A Legacy of Swing
+
+</h4>
+
+<p>
+
+Founded by Doug Wareing, Jazz House Big Band has brought authentic big band music to audiences throughout Eastern Idaho for nearly three decades.
+
+</p>
+
+<p>
+
+Featuring a full eighteen-piece ensemble, the band performs classics from Glenn Miller, Count Basie, Duke Ellington, Benny Goodman, and many more.
+
+</p>
+
+<p>
+
+Whether entertaining at weddings, galas, community concerts, festivals, or private events, the Jazz House Big Band continues to preserve America's greatest music while inspiring future generations of jazz musicians.
+
+</p>
+
+<a href="#book" class="btn gold">
+
+Reserve Your Date
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="performances" class="services">
+
+<div class="container">
+
+<div class="section-header">
+
+<h3>
+
+Perfect for Every Occasion
+
+</h3>
+
+<div class="gold-line"></div>
+
+</div>
+
+<div class="service-grid">
+
+<article class="service-card">
+
+<div class="icon">
+
+🎺
+
+</div>
+
+<h4>
+
+Weddings
+
+</h4>
+
+<p>
+
+Elegant live music that creates an unforgettable atmosphere for ceremonies, receptions, and celebrations.
+
+</p>
+
+</article>
+
+<article class="service-card">
+
+<div class="icon">
+
+🎷
+
+</div>
+
+<h4>
+
+Corporate Events
+
+</h4>
+
+<p>
+
+Professional entertainment for banquets, conferences, holiday parties, and business gatherings.
+
+</p>
+
+</article>
+
+<article class="service-card">
+
+<div class="icon">
+
+🎼
+
+</div>
+
+<h4>
+
+Community Events
+
+</h4>
+
+<p>
+
+Festivals, dances, concerts, fundraisers, and civic celebrations featuring authentic big band jazz.
+
+</p>
+
+</article>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Featured Performances -->
+
+<section class="featured">
+
+    <div class="container">
+
+        <div class="section-header">
+            <h3>Experience the Sound of Swing</h3>
+            <div class="gold-line"></div>
+        </div>
+
+        <div class="featured-grid">
+
+            <div class="featured-image">
+                <img src="images/band2.jpg" alt="Jazz House Big Band Performing">
+            </div>
+
+            <div class="featured-text">
+
+                <h4>Eastern Idaho's Premier Big Band</h4>
+
+                <p>
+                    Jazz House Big Band performs authentic music from the golden age
+                    of jazz. Our repertoire includes timeless classics from Glenn
+                    Miller, Count Basie, Duke Ellington, Tommy Dorsey, Benny
+                    Goodman, Frank Sinatra, and many more.
+                </p>
+
+                <p>
+                    Whether guests are dancing the night away or simply enjoying an
+                    evening of incredible music, every performance is designed to
+                    leave a lasting impression.
+                </p>
+
+                <ul class="feature-list">
+
+                    <li>✔ 18-Piece Big Band</li>
+                    <li>✔ Professional Sound</li>
+                    <li>✔ Family Friendly</li>
+                    <li>✔ Weddings & Galas</li>
+                    <li>✔ Corporate Events</li>
+                    <li>✔ Community Concerts</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Gallery -->
+
+<section id="gallery" class="gallery">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h3>Gallery</h3>
+
+            <div class="gold-line"></div>
+
+            <p>
+                A glimpse into the excitement, elegance, and timeless atmosphere of
+                Jazz House Big Band performances.
+            </p>
+
+        </div>
+
+        <div class="gallery-grid">
+
+            <img src="images/gallery1.jpg" alt="Performance 1">
+
+            <img src="images/gallery2.jpg" alt="Performance 2">
+
+            <img src="images/gallery3.jpg" alt="Performance 3">
+
+            <img src="images/gallery4.jpg" alt="Performance 4">
+
+            <img src="images/gallery5.jpg" alt="Performance 5">
+
+            <img src="images/gallery6.jpg" alt="Performance 6">
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Why Choose Us -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h3>Why Choose Jazz House?</h3>
+
+            <div class="gold-line"></div>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <h4>Nearly 30 Years of Excellence</h4>
+
+                <p>
+                    Decades of experience entertaining audiences throughout Eastern
+                    Idaho.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <h4>Authentic Swing Era Music</h4>
+
+                <p>
+                    The timeless sounds of the 1920s through the 1960s performed by
+                    a full jazz orchestra.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <h4>Professional Musicians</h4>
+
+                <p>
+                    Talented performers dedicated to providing unforgettable live
+                    entertainment.
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <h4>Perfect for Every Event</h4>
+
+                <p>
+                    Weddings, festivals, dances, fundraisers, concerts, and private
+                    celebrations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Booking -->
+
+<section id="book" class="booking">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <h3>Book the Band</h3>
+
+            <div class="gold-line"></div>
+
+            <p>
+                Bring the excitement and elegance of live big band music to your
+                next event.
+            </p>
+
+        </div>
+
+        <form class="booking-form">
+
+            <div class="row">
+
+                <input type="text" placeholder="Full Name" required>
+
+                <input type="email" placeholder="Email Address" required>
+
+            </div>
+
+            <div class="row">
+
+                <input type="text" placeholder="Phone Number">
+
+                <input type="date">
+
+            </div>
+
+            <input type="text" placeholder="Venue or Event Location">
+
+            <select>
+
+                <option>Wedding</option>
+                <option>Corporate Event</option>
+                <option>Festival</option>
+                <option>Fundraiser</option>
+                <option>Community Concert</option>
+                <option>Private Party</option>
+                <option>Other</option>
+
+            </select>
+
+            <textarea
+                rows="6"
+                placeholder="Tell us about your event..."></textarea>
+
+            <button type="submit" class="btn gold">
+
+                Request Information
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
