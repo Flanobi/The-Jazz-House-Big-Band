@@ -367,6 +367,70 @@
     top: 72px;
   }
 }
+    /* Full footer to match main pages */
+.footer {
+  padding: 70px 0 30px;
+  background: #050505;
+  border-top: 1px solid var(--border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr 0.7fr;
+  gap: 3rem;
+}
+
+.footer-brand p {
+  max-width: 440px;
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.footer h3 {
+  color: var(--gold-light);
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--gold-light);
+}
+
+.footer-bottom {
+  margin-top: 3.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(198, 161, 91, 0.18);
+  color: #928c82;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (max-width: 950px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 
@@ -440,9 +504,76 @@
 
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; 2026 Jazz House Big Band. All Rights Reserved.</p>
-  </footer>
+  <footer class="footer">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <a href="index.html" class="brand">
+          <span class="brand-main">Jazz House</span>
+          <span class="brand-sub">Big Band</span>
+        </a>
+
+        <p>
+          Preserving the sound, style, and energy of classic Big Band music
+          through live performances across Eastern Idaho.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Explore</h3>
+
+        <ul class="footer-links">
+          <li><a href="about.html">About the Band</a></li>
+          <li><a href="performances.html">Performances</a></li>
+          <li><a href="gallery.html">Photo Gallery</a></li>
+          <li><a href="contact.html#booking-form">Book the Band</a></li>
+        </ul>
+
+      </div>
+
+      <div>
+
+        <h3>Connect</h3>
+
+        <ul class="footer-links">
+          <li><a href="contact.html">Contact Us</a></li>
+          <li>
+            <a
+              href="https://www.facebook.com/JazzHouseBigBand/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://wareingscholarship.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Doug Wareing Scholarship
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Jazz House Big Band. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
 
 </body>
 </html>
