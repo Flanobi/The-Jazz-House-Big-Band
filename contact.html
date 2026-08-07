@@ -1164,7 +1164,43 @@
     scroll-margin-top: 170px;
       }
     }
+.logo-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+}
 
+.logo-brand img {
+  height: 72px;
+  width: auto;
+  max-width: 180px;
+  display: block;
+  object-fit: contain;
+}
+
+.nav {
+  align-items: center;
+}
+
+.nav-links {
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  white-space: nowrap;
+}
+
+@media (max-width: 750px) {
+  .logo-brand img {
+    height: 58px;
+    max-width: 150px;
+  }
+}
+    
   </style>
 </head>
 
