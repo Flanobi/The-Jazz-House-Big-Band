@@ -1200,6 +1200,40 @@
     max-width: 150px;
   }
 }
+    /* Contact page header spacing fix */
+.site-header .nav {
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-header .text-brand {
+  flex-shrink: 0;
+  margin-left: 0;
+}
+
+.site-header .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-header .nav-links a {
+  white-space: nowrap;
+}
+
+@media (max-width: 750px) {
+  .site-header .nav {
+    padding: 1rem 1.25rem;
+  }
+}
     
   </style>
 </head>
