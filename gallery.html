@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gallery | Jazz House Big Band</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #090909;
+      --dark: #111111;
+      --dark-light: #191919;
+      --gold: #c6a15b;
+      --gold-light: #e0c58a;
+      --cream: #f3ead8;
+      --white: #ffffff;
+      --muted: #c8c1b6;
+      --border: rgba(198, 161, 91, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: "Montserrat", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(9, 9, 9, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .brand {
+      font-family: "Cinzel", serif;
+      color: var(--gold-light);
+      font-size: 1.2rem;
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      font-size: 0.85rem;
+      letter-spacing: 0.08rem;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: var(--cream);
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-light);
+    }
+
+    .section {
+      padding: 6rem 1.5rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .page-hero {
+      min-height: 55vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      background:
+        linear-gradient(rgba(9, 9, 9, 0.75), rgba(9, 9, 9, 0.9)),
+        radial-gradient(circle at center, rgba(198, 161, 91, 0.18), transparent 55%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      text-transform: uppercase;
+      letter-spacing: 0.22rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .page-title {
+      font-family: "Cinzel", serif;
+      font-size: clamp(2.5rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      color: var(--white);
+      margin-bottom: 1.25rem;
+    }
+
+    .gold-line {
+      width: 90px;
+      height: 2px;
+      background: var(--gold);
+      margin: 1.5rem auto;
+    }
+
+    .intro {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .coming-soon-card {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      text-align: center;
+      border: 1px solid var(--border);
+      background:
+        linear-gradient(135deg, rgba(198, 161, 91, 0.08), transparent 35%),
+        rgba(17, 17, 17, 0.95);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .coming-soon-icon {
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 2rem;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-size: 2rem;
+      font-family: "Cinzel", serif;
+    }
+
+    .coming-soon-card h2 {
+      font-family: "Cinzel", serif;
+      color: var(--white);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: 1rem;
+    }
+
+    .coming-soon-card p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    .decor-row {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .decor-row span {
+      width: 12px;
+      height: 12px;
+      border: 1px solid var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .site-footer {
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 750px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+
+      .section {
+        padding: 4rem 1.25rem;
+      }
+
+      .coming-soon-card {
+        padding: 3rem 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a href="index.html" class="brand">Jazz House Big Band</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="performances.html">Performances</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="contact.html#booking-form">Book the Band</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Jazz House Big Band</p>
+        <h1 class="page-title">Gallery</h1>
+        <div class="gold-line"></div>
+        <p class="intro">
+          Photos from performances, dances, community events, and special moments with the band.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="coming-soon-card">
+          <div class="coming-soon-icon">♪</div>
+
+          <h2>Pictures Coming Soon</h2>
+
+          <p>
+            Our gallery is currently being prepared. Check back soon for photos
+            of Jazz House Big Band performances, swing dances, and community events.
+          </p>
+
+          <div class="decor-row">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Jazz House Big Band. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
