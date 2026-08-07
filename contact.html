@@ -1239,14 +1239,24 @@
 </head>
 
   <header class="site-header">
-  <nav class="nav">
+  <div class="container nav">
 
-    <a href="index.html" class="brand text-brand" aria-label="Jazz House Big Band homepage">
+    <a href="index.html" class="brand" aria-label="Jazz House Big Band homepage">
       <span class="brand-main">Jazz House</span>
       <span class="brand-sub">Big Band</span>
     </a>
 
-    <ul class="nav-links">
+    <button
+      class="menu-button"
+      id="menuButton"
+      type="button"
+      aria-label="Open navigation menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="index.html">Home</a></li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="performances.html">Performances</a></li>
@@ -1256,9 +1266,8 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
 
-  </nav>
+  </div>
 </header>
-
   <main id="contact">
 
     <section class="contact-hero">
