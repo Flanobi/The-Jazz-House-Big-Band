@@ -836,7 +836,18 @@
   letter-spacing: 0.18rem;
   text-transform: uppercase;
 }
-
+    
+.featured-photo {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  border: 1px solid rgba(224, 197, 138, 0.55);
+  box-shadow:
+    inset 0 0 0 10px rgba(9, 9, 9, 0.68),
+    inset 0 0 0 11px rgba(198, 161, 91, 0.22),
+    0 24px 60px rgba(0, 0, 0, 0.38);
+}
     /* ===== Refined Art Deco enhancements ===== */
 
     body {
@@ -1102,13 +1113,11 @@
 
         </div>
 
-        <div class="photo-placeholder">
-          <div class="placeholder-text">
-            Featured Band Photo
-          </div>
-        </div>
-
-      </div>
+        <img
+  src="images/D901144B-7B05-40B8-B13D-2600A796BE0C.jpeg"
+  alt="Jazz House Big Band featured photo"
+  class="featured-photo"
+>
 
     </section>
 
